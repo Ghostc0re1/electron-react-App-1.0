@@ -1,0 +1,21 @@
+.fee-attribution-form {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.fee-attribution-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.fee-attribution-form .MuiTextField-root {
+  margin-bottom: 20px;
+}
+
+.fee-attribution-form .MuiButton-root {
+  margin-top: 20px;
+}

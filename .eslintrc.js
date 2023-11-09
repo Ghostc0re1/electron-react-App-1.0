@@ -27,6 +27,9 @@ module.exports = {
       },
       typescript: {},
     },
+    {
+      "ignorePatterns": ["*.html", "*.ejs"],
+    },
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
     },

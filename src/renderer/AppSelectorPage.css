@@ -1,0 +1,77 @@
+.app-selector {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+
+.menu-bar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.menu-bar .menu-button {
+  font-size: 12px;
+  cursor: pointer;
+  background-color: white;
+  border-color: white;
+  border-style: solid;
+  border-radius: 15px;
+}
+.user-icon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.app-main {
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-grid {
+  display: grid;
+  width: 100%; /* Take full width of its parent */
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Flexible grid items */
+  gap: 20px;
+  /* Removed max-width to allow full width use */
+}
+
+.button-grid button {
+  padding: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .menu-bar .menu-button,
+  .user-icon img {
+    font-size: 20px; /* Smaller font size for smaller screens */
+    width: 30px; /* Smaller icon size for smaller screens */
+    height: 30px; /* Smaller icon size for smaller screens */
+  }
+
+  .button-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Smaller buttons on small screens */
+    gap: 10px; /* Smaller gap on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .button-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Even smaller buttons on extra small screens */
+  }
+}
