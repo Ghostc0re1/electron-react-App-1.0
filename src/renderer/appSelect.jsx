@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './AppSelectorPage.css'; // make sure to create this CSS file for styling
 import UserIcon from './icons/user-icon.png';
-import { useLocation } from 'react-router-dom'; // Import useLocation
 import FeeAttributionForm from './feeAttribution';
 
 const AppSelectorPage = () => {

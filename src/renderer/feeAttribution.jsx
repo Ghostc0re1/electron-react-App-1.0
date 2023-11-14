@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { TextField, Button } from '@mui/material';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'; // Corrected import path
-import LocalizationProvider from '@mui/lab/LocalizationProvider'; // This stays the same
-import DatePicker from '@mui/x-date-pickers/DatePicker'; // Corrected import path
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 function FeeAttributionForm() {
   const [clientName, setClientName] = useState('');
