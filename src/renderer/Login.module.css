@@ -1,0 +1,134 @@
+/* Login.module.css */
+.form-container {
+  margin-top: 125px;
+  border: #000000;
+  border-radius: 1em;
+  align-self: center;
+  align-content: center;
+  background-color: #1a1a1a; /* Dark background */
+  color: #ffffff; /* White text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  height: 75%; /* Full viewport height to enable full page centering */
+  width: 75%;
+  font-size: 1rem; /* consistent font size */
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 0rem; /* space between elements */
+  color: black;
+}
+.body {
+  background: linear-gradient(200.96deg, #fedc2a -29.09%, #dd5789 51.77%, #7a2c9e 129.35%);
+}
+/* Header */
+h1 {
+  font-size: 2rem; /* Larger font size for the header */
+  color: #ffffff; /* White text */
+  margin-bottom: 2rem; /* Space below the header */
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Wrapper for each TextField and the button */
+.input-wrapper {
+  display: flex; /* Establish flex container */
+  justify-content: center; /* Center children along the main axis */
+  margin-bottom: 1rem !important; /* Space between input fields */
+  min-width: 25vh;
+  width: 100%;
+}
+
+/* Style for the input fields */
+.username-field,
+.password-field {
+  background-color: #333333; /* Darker background for input fields */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 1rem; /* Padding inside the input fields */
+  color: #ffffff; /* White text */
+  width: 100% !important; /* Set a specific width for the TextField components and button */
+}
+
+/* Style for the primary action button */
+.button {
+  background: linear-gradient(200.96deg, #fedc2a -29.09%, #dd5789 51.77%, #7a2c9e 129.35%);
+  color: #000000; /* Black text */
+  padding: 1rem 2rem; /* Padding around the text */
+  font-size: 1rem; /* Font size */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background color transition */
+  gap: 5rem; /* Space between icon and text */
+  width: 100% !important;
+  height: auto;
+  min-height: 5vh;
+}
+/* Hover effect for the primary action button */
+.button:hover {
+  background-color: #e0a80d; /* Slightly darker shade on hover */
+}
+/* Style for social media login buttons */
+.social-login-button {
+  background-color: #262626; /* Dark background for buttons */
+  color: #ffffff; /* White text */
+  padding: 1rem; /* Padding inside the buttons */
+  border: 1px solid #4d4d4d; /* Subtle border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  display: flex; /* Flexbox for internal alignment */
+  gap: .5rem; /* Space between icon and text */
+  transition: all 0.3s; /* Smooth transition for hover effects */
+  width: 45%;
+  height: 5vh;
+}
+/* Hover effect for social media buttons */
+.social-login-button:hover {
+  background-color: #3d3d3d; /* Slightly lighter shade on hover */
+  border-color: #666666; /* Lighter border on hover */
+}
+/* Adjust the privacy and terms links at the bottom */
+.privacy-terms {
+  color: #ffffff; /* White text */
+  text-align: center; /* Centered text */
+  margin-top: 2rem; /* Space from the form */
+  font-size: 0.875rem; /* Smaller font size */
+}
+.columns-container {
+  display: flex;
+  width: 100%;
+  max-width: 900px; /* Adjust the max-width as per your design */
+}
+
+.left-column,
+.right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-basis: 50%;
+}
+
+/* Adjust the width of input fields and buttons to fit within the columns */
+.username-field,
+.password-field,
+.button,
+.social-login-button {
+  width: 90%; /* Adjust the width to fit within the columns */
+  margin-bottom: 1rem; /* Space between fields/buttons */
+}
+
+/* You might want to adjust the gap if necessary */
+.button,
+.social-login-button {
+  gap: 1rem; /* Adjust the gap between icon and text if needed */
+}
+.input-wrapper {
+  width: 100%;
+  margin-bottom: 1rem;
+}

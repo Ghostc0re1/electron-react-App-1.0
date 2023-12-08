@@ -1,22 +1,10 @@
 /*
- * @NOTE: Prepend a `~` to css file paths that are in your node_modules
- *        See https://github.com/webpack-contrib/sass-loader#imports
+App.css
  */
 body {
-  position: relative;
-  color: white;
-  height: 100vh;
-  background: linear-gradient(
-    200.96deg,
-    #fedc2a -29.09%,
-    #dd5789 51.77%,
-    #7a2c9e 129.35%
-  );
   font-family: sans-serif;
-  overflow-y: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: linear-gradient(200.96deg, #fedc2a -29.09%, #dd5789 51.77%, #7a2c9e 129.35%);
+  color: white;
 }
 
 button {
@@ -59,4 +47,15 @@ a:hover {
   justify-content: center;
   align-items: center;
   margin: 20px 0;
+}
+.layout {
+  display: flex;
+  flex-direction: column; /* Stack header, sidebar, and content vertically */
+  min-height: 0; /* Needed for flex children to behave correctly in some browsers */
+  flex: 1; /* Flex child: Takes up all available space */
+}
+
+.content {
+  flex: 1; /* Flex child: Expands to fill available space not taken by header/sidebar */
+  overflow-y: auto; /* Adds scroll to content if overflow */
 }

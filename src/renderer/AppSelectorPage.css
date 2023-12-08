@@ -1,77 +1,37 @@
+/* AppSelectorPage.css */
+
 .app-selector {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+  display: flex; /* Changed from text-align to flex */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100%; /* Take the full height to allow vertical centering */
 }
-
-.app-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #333;
-  color: white;
-}
-
-.menu-bar {
-  flex: 1;
-  display: flex;
-  align-items: center;
-}
-
-.menu-bar .menu-button {
-  font-size: 12px;
-  cursor: pointer;
-  background-color: white;
-  border-color: white;
-  border-style: solid;
-  border-radius: 15px;
-}
-.user-icon img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-
 .app-main {
-  flex-grow: 1;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex; /* Makes .app-main a flex container */
+  justify-content: center; /* Centers .button-grid horizontally */
+  align-items: center; /* Centers .button-grid vertically */
+  height: 100%; /* Full height of its container, needed for align-items to work */
 }
 
 .button-grid {
   display: grid;
-  width: 100%; /* Take full width of its parent */
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Flexible grid items */
-  gap: 20px;
-  /* Removed max-width to allow full width use */
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 0px;
+  /* No need for align-items or align-content here since .app-main is now the flex container */
 }
 
-.button-grid button {
-  padding: 20px;
-  font-size: 20px;
+.button-grid a button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
   cursor: pointer;
+  transition: background-color 0.3s; /* Added transition for a smoother hover effect */
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .menu-bar .menu-button,
-  .user-icon img {
-    font-size: 20px; /* Smaller font size for smaller screens */
-    width: 30px; /* Smaller icon size for smaller screens */
-    height: 30px; /* Smaller icon size for smaller screens */
-  }
-
-  .button-grid {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Smaller buttons on small screens */
-    gap: 10px; /* Smaller gap on small screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .button-grid {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Even smaller buttons on extra small screens */
-  }
+.button-grid a button:hover {
+  background-color: #0056b3;
 }

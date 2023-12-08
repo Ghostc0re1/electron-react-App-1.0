@@ -1,0 +1,30 @@
+/* TicketList.module.css */
+
+.ticket-list {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 30px;
+}
+
+thead {
+  background-color: #000000;
+  border-radius: 30px;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #000000;
+  border: 1px solid #000000;
+}
+
+tr:hover {
+  background-color: #8d4141;
+  cursor: pointer;
+  border-radius: 30px;
+}

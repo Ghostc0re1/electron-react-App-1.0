@@ -3,15 +3,16 @@ import { TextField, Button } from '@mui/material';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers';
+import { TextFieldProps } from '@mui/material/TextField';
 
-function FeeAttributionForm() {
+function TicketForm() {
   const [clientName, setClientName] = useState('');
   const [accountNumber, setAccountNumber] = useState('');
   const [model, setModel] = useState('');
-  const [effectiveDate, setEffectiveDate] = useState(null);
+  const [effectiveDate, setEffectiveDate] = useState<Date | null>(null);
   const [notes, setNotes] = useState('');
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // TODO: Implement the submit logic
     console.log({ clientName, accountNumber, model, effectiveDate, notes });
@@ -45,8 +46,9 @@ function FeeAttributionForm() {
           <DatePicker
             label="Effective Date"
             value={effectiveDate}
-            onChange={(newValue) => setEffectiveDate(newValue)}
-            renderInput={(params) => <TextField {...params} margin="normal" fullWidth />}
+            onChange={(newValue: Date | null) => setEffectiveDate(newValue)}
+            renderInput={(params: TextFieldProps) => <TextField {...params} fullWidth />}
+            margin="normal"
           />
           <TextField
             label="Notes"
@@ -66,4 +68,4 @@ function FeeAttributionForm() {
   );
 }
 
-export default FeeAttributionForm;
+export default TicketForm;
