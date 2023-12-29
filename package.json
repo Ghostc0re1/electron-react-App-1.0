@@ -85,7 +85,7 @@
     ],
     "testEnvironment": "jsdom",
     "testEnvironmentOptions": {
-      "url": "http://localhost/"
+      "url": "http://localhost:3000/"
     },
     "testPathIgnorePatterns": [
       "release/app/dist",

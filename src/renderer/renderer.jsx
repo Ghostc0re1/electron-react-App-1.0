@@ -5,6 +5,28 @@ const seeProfileButton = document.getElementById('seeProfile');
 const cardDiv = document.getElementById('cardDiv');
 const profileDiv = document.getElementById('profileDiv');
 
+
+cconst { ipcRenderer } = require('electron');
+
+async function getAuthToken() {
+  return ipcRenderer.invoke('getAuthToken');
+}
+
+async function makeAuthenticatedRequest() {
+  const token = await getAuthToken();
+  if (token) {
+    fetch('https://localhost:5000/api/tickets', {
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+  }
+}
+
+
 window.renderer.showWelcomeMessage((event, account) => {
     if (!account) return;
 
