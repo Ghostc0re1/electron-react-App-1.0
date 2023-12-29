@@ -32,7 +32,7 @@ function LoginPage() {
       await msalInstance.loginRedirect({
         // Use msalInstance here
         scopes: ['user.read'],
-        redirectUri: 'myapp://auth',
+        redirectUri: 'http://localhost:5000/redirect',
       });
     } catch (error) {
       console.error('Login failed', error);
